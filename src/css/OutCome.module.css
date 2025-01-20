@@ -1,0 +1,270 @@
+.OutComeHead {
+  font-family: Dm Sans;
+  font-weight: 600;
+  font-size: 59px;
+  line-height: 70px;
+  letter-spacing: 1px;
+  text-align: center;
+  text-shadow: 3px 0px rgba(229, 109, 9, 1);
+}
+.OutComeHeadColor {
+  color: rgba(229, 109, 9, 1);
+  text-shadow: 3px 0px rgba(229, 109, 9, 1);
+}
+.NumberText {
+  width: 345px;
+  height: auto;
+  border: 0.5px solid rgba(0, 0, 0, 1);
+  display: flex;
+  flex-direction: column;
+  padding: 30px 10px;
+  /* width: fit-content; */
+  border-radius: 30px;
+  gap: 10px;
+  text-align: center;
+}
+.NumberTextBorder {
+  border: 1px solid rgba(0, 0, 0, 1);
+  width: 100%;
+  margin-top: 20px;
+}
+.NumberTextNumber {
+  font-family: Dm Sans;
+  font-weight: 300;
+  font-size: 64px;
+  line-height: 70px;
+  letter-spacing: -2.8px;
+  align-items: center;
+  color: rgba(229, 109, 9, 1);
+}
+.NumberTextText {
+  font-family: Dm Sans;
+  font-weight: 600;
+  font-size: 21px;
+  line-height: 25.2px;
+  letter-spacing: -0.52px;
+  text-align: center;
+}
+
+/* Our NetWork */
+.OurNetworkHead {
+  font-family: Dm Sans;
+  font-weight: 600;
+  font-size: 59px;
+  line-height: 70px;
+  letter-spacing: 1px;
+  text-align: center;
+  color: #e56d09;
+  text-shadow: 3px 0px rgba(229, 109, 9, 1);
+}
+.ImageConatinerMain {
+  border: 1px solid #dbdbdb;
+  border-radius: 16px;
+  padding: 70px 20px;
+  background-color: #ffffff;
+  box-shadow: 2px 2pxrgba (255, 255, 255, 1) white;
+}
+
+/* Then Ever */
+.ThenEverMain {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  background: url("../assets/Image.png") no-repeat center center/cover;
+  overflow: hidden; /* Prevent scrolling */
+}
+
+.whiteOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Ensure it spans the full width of the parent */
+  height: 20%; /* 40% of the height */
+  background-color: white;
+  opacity: 1; /* 40% white transparency */
+  z-index: 2; /* Place the white overlay above the background image */
+  overflow: hidden; /* Prevent accidental overflow */
+}
+
+.ThenEveroverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Ensure no horizontal overflow */
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 150px;
+}
+
+.midImage {
+  max-width: 100%; /* Ensure the image doesn’t exceed container width */
+  max-height: 50%; /* Ensure the image doesn’t exceed container height */
+  position: relative;
+  z-index: 3; /* Ensure image stays on top of the white overlay */
+}
+.ThenEverText {
+  font-family: Dm Sans;
+  font-weight: 600;
+  font-size: 59px;
+  line-height: 70px;
+  letter-spacing: -1.5px;
+  text-align: center;
+  color: white;
+  margin-top: 30px;
+}
+.ThenEverColorText {
+  color: #e56d09;
+}
+.ThenEverPara {
+  font-family: "Popins";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #ffffffd1;
+  max-width: 60%;
+}
+.ThenEverBtn {
+  padding: 15px 40px;
+  background-color: #e56d09;
+  font-family: "Popins";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #ffffffd1;
+  width: fit-content;
+  margin-top: 30px;
+  border-radius: 60px;
+}
+
+/* OurStory */
+.OurStoryMain {
+  padding: 50px 150px;
+}
+.OurStoryImageBorder {
+  border: 1px solid black;
+  border-radius: 20px;
+  padding: 10px 20px;
+  width: fit-content;
+  box-shadow: 16px 16px 0px 0px #1a1a1a;
+}
+.OurStoryImageHead {
+}
+.OurStoryLeft {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.OurStoryDot {
+  width: 10px;
+  height: 10px;
+  background-color: black;
+  border-radius: 50%;
+  margin: 0 10px;
+  display: inline-block;
+}
+.OurStoryHead {
+  font-family: "DM Sans", sans-serif; /* Set the font to DM Sans */
+  font-weight: 600; /* Set the font weight to 600 */
+  font-size: 59px; /* Set the font size */
+  line-height: 70.8px; /* Set the line height */
+  letter-spacing: 1px; /* Set letter spacing */
+  text-align: center; /* Center align the text */
+  text-shadow: 3px 0px #000000;
+}
+.OurStoryColorText {
+  color: #e56d09;
+  text-shadow: 3px 0px #e56d09;
+}
+.OurStoryImageContainer {
+  display: flex;
+  gap: 20px;
+}
+
+/* Rotate Line */
+.banners {
+  position: relative;
+  height: 300px; /* Adjust height */
+  width: 100%;
+  overflow: hidden;
+}
+
+.banner {
+  position: absolute;
+  width: 200%; /* Extend beyond the screen */
+  left: -50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-origin: center;
+  white-space: nowrap;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.bannerOrange {
+  background-color: #f57c00; /* Orange color */
+  height: 50px; /* Banner height */
+  transform: rotate(-10deg); /* Rotate slightly */
+  top: 40%; /* Adjust vertical position */
+}
+
+.bannerBlack {
+  background-color: black; /* Black color */
+  height: 50px; /* Banner height */
+  transform: rotate(10deg); /* Rotate opposite direction */
+  top: 60%; /* Adjust vertical position */
+}
+
+.repeatedText {
+  display: flex;
+  gap: 10px; /* Spacing between the boxes */
+}
+
+.textBox {
+  /* Box background color */
+  color: white; /* Text color */
+  padding: 5px 10px; /* Inner spacing */
+  /* Border around the text box */
+  border-radius: 4px; /* Optional: Add rounded corners */
+  display: inline-block;
+  font-size: 16px; /* Adjust text size */
+  font-weight: bold; /* Make text bold */
+  text-align: center;
+}
+.AccordionMain {
+  padding: 50px 150px;
+}
+.AccordionHead {
+  font-family: "DM Sans", sans-serif; /* Set the font to DM Sans */
+  font-weight: 600; /* Set the font weight to 600 */
+  font-size: 59px; /* Set the font size */
+  line-height: 70.8px; /* Set the line height */
+  letter-spacing: 1px; /* Set letter spacing */
+  text-align: center; /* Center align the text */
+  text-shadow: 3px 0px #000000;
+}
+.needHelp {
+  padding: 30px 40px;
+  background: rgba(36, 34, 55, 1);
+  color: white;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.bookBtn {
+  padding: 20px 40px;
+  background-color: white;
+  color: black;
+}
+.helpMain {
+  width: 100vw;
+  background-color: rgba(229, 109, 9, 1);
+}

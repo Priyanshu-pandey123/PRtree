@@ -1,0 +1,170 @@
+.main {
+  border: 2px solid white;
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 30px;
+  border-radius: 30px;
+  max-width: 300px;
+}
+.iconImg {
+  background-color: white;
+  width: 40px;
+  height: auto; /* Ensure the container is square */
+  padding: 10px;
+  border-radius: 50%;
+  object-fit: cover; /* Ensures the image covers the circle */
+}
+.step {
+  color: white;
+  font-family: "DM Sans", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  margin-top: 20px;
+}
+.StepHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.para {
+  color: #ffffff;
+  font-family: "Poppins";
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+/* client css */
+.clientMain {
+  background-color: black;
+  padding: 100px;
+  text-align: center;
+}
+
+.clientHead {
+  color: white;
+  font-family: "DM Sans", sans-serif;
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 60px;
+  margin-bottom: 40px;
+}
+
+.imageArray {
+  width: fit-content; /* Ensure it spans the full width */
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px; /* Add spacing between images */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Box shadow with transparency */
+  border-radius: 30px;
+  padding: 20px; /* Add padding inside the box */
+  overflow: hidden; /* Prevent images from spilling out */
+  margin: auto;
+}
+
+.imageArray img {
+  width: 150px;
+  height: 100px; /* Restrict the maximum width for consistency */
+  /* Fix the height to make all images uniform */
+  /* Crop and scale images to fill the dimensions */
+  border-radius: 10px; /* Optional: Add rounded corners to the images */
+}
+
+/* para Image css */
+.PRmain {
+  display: flex;
+  padding: 20px 150px;
+  align-items: center;
+  justify-content: space-between;
+}
+.PRHead {
+  font-family: "DM Sans", sans-serif;
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 60px;
+  max-width: 600px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.PRul {
+  margin-top: 30px;
+}
+.PRcolorPara {
+  color: rgba(229, 109, 9, 1);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.PRListItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+
+.icon {
+  width: 20px; /* Adjust size as needed */
+  height: 18px;
+  margin-right: 10px;
+}
+.PRmain1 {
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 10px 150px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Approach box */
+.OurApproachMain {
+  background-color: black;
+  padding: 50px 150px;
+}
+.ApproachBoxMain {
+  min-height: 300px;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  background: linear-gradient(180deg, #000000 0%, #1a1a1a 100%);
+  border-radius: 30px;
+  width: 45%;
+}
+.OurApproachConatiners {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.OurApproachHead {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 600;
+  font-size: 60px;
+  line-height: 70px;
+  color: rgba(255, 255, 255, 1);
+  text-shadow: 2px 2px 2px rgba(255, 255, 255, 1);
+  text-align: center;
+  margin-bottom: 40px;
+}
+.ApproachBoxHead {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 40px;
+  text-align: center;
+  color: rgba(255, 255, 255, 1);
+}
+.ApproachBoxPara {
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: rgba(255, 255, 255, 1);
+  letter-spacing: -0.4px;
+}

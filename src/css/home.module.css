@@ -1,0 +1,216 @@
+.backImage {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  background: url("../assets//Image.png") no-repeat center center/cover;
+  overflow: hidden; /* Prevent scrolling */
+}
+
+.content {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 250px;
+  margin-top: 50px;
+}
+.leftRight {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  row-gap: 30px;
+  flex-wrap: wrap;
+  width: 50%;
+}
+.leftHead {
+  background-color: #ffffff36;
+  padding: 15px 60px;
+  color: white;
+  border-radius: 36px;
+  width: fit-content;
+  font-family: "DM Sans";
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 22.5px;
+}
+.orangeText {
+  color: #e56d09;
+  font-family: "DM Sans";
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 45.5px;
+  margin-top: 40px;
+  letter-spacing: -1px;
+  white-space: nowrap;
+}
+
+.normalText {
+  color: white;
+  font-family: "DM Sans";
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 45.5px;
+}
+
+.leftPara {
+  font-family: "DM Sans";
+  color: white;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 27.5px;
+  width: 100%;
+}
+
+.right {
+}
+.headImage {
+  width: 100%; /* Makes the image scale down within its container */
+  max-width: 300px; /* Optional: Set a max width */
+  height: auto; /* Maintains aspect ratio */
+  object-fit: cover; /* Ensures the image looks good if cropped */
+  border-radius: 8px; /* Optional: Add rounded corners */
+}
+.btn {
+  background-color: #e56d09;
+  padding: 15px 40px;
+  color: #ffffff;
+  font-family: "DM Sans";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  border-radius: 32px;
+}
+
+.howDoWeDoIt {
+  position: relative;
+  width: 100%;
+  height: auto;
+  background: linear-gradient(to bottom, #fff 50%, #e56d09 50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+}
+
+.contentWrapper {
+  position: relative;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+}
+
+.mainImage {
+  width: 100%;
+  max-width: auto;
+  object-fit: contain;
+  margin-bottom: 20px;
+}
+
+.sectionTitle {
+  color: white;
+  font-family: "DM Sans", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.stepContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 10px;
+}
+
+@media (max-width: 1600px) {
+  .content {
+    padding: 50px 100px;
+  }
+  .leftHead {
+    white-space: nowrap;
+  }
+}
+@media (max-width: 1300px) {
+  .orangeText {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  .normalText {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  .left {
+    width: 60%;
+  }
+  .right {
+    width: 40%;
+  }
+  .leftHead {
+    padding: 15px 30px;
+  }
+}
+@media (max-width: 1050px) {
+  .content {
+    padding: 50px 30px;
+  }
+  .leftPara {
+    font-family: "DM Sans";
+    color: white;
+    font-weight: 400;
+    font-size: 15px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .content {
+    flex-direction: column;
+    padding: 20px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    row-gap: 30px;
+  }
+  .left {
+    width: 100%;
+  }
+  .right {
+    width: 100%;
+  }
+  .leftHead {
+    padding: 10px;
+    font-size: 11px;
+    line-height: 14.5px;
+  }
+  .orangeText {
+    font-size: 20px;
+    line-height: 32px;
+  }
+  .normalText {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .leftPara {
+    line-height: 24px;
+  }
+  .btn {
+    background-color: #e56d09;
+    padding: 10px 20px;
+    color: #ffffff;
+    font-family: "DM Sans";
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    border-radius: 32px;
+  }
+}

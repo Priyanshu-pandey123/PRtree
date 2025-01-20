@@ -1,0 +1,40 @@
+.FooterContainer {
+  background-color: black;
+  height: auto;
+  width: 100%;
+  padding: 50px 150px;
+  display: flex;
+  color: white;
+  column-gap: 20px;
+}
+.footerList {
+  display: flex;
+  columns: 30px;
+}
+
+.footerHead {
+  font-family: Dm Sans;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: white;
+  margin-bottom: 30px;
+}
+.listContainer {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+
+.footerMapList {
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 21px;
+  color: rgba(255, 255, 255, 0.39);
+  max-width: 150px;
+}
+.footerMain {
+  /* border: 1px solid white; */
+  margin-inline: 30px;
+}
