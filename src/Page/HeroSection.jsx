@@ -12,10 +12,12 @@ import OurStory from "../Component/OurStory";
 import RotateLine from "../Component/RotateLine";
 import Accordion from "../Component/Accordion";
 import Footer from "../Component/Footer";
+import MultiForm from "./MultiForm";
 
 const HeroSection = () => {
   return (
     <div className={home.main}>
+      {/* <MultiForm /> */}
       <NavHome />
       <HowDoit />
       <Client />

@@ -8,7 +8,6 @@ const NavHome = () => {
   return (
     <>
       <div className={`${home.backImage}`}>
-        <Navbar />
         <div className={`${home.content}`}>
           <div className={home.left}>
             <p className={home.leftHead}>

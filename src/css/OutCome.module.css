@@ -409,3 +409,51 @@
     width: 100%;
   }
 }
+
+/* Our Network */
+@media (max-width: 768px) {
+  /* Our NetWork */
+  .OurNetworkHead {
+    font-family: Dm Sans;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 40px;
+    letter-spacing: 1px;
+    text-align: center;
+    color: #e56d09;
+    text-shadow: 3px 0px rgba(229, 109, 9, 1);
+    margin-block: 30px;
+  }
+}
+
+/* OutCome */
+
+@media (max-width: 768px) {
+  .OutComeHead {
+    font-family: Dm Sans;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 40px;
+    letter-spacing: 1px;
+    text-align: center;
+    text-shadow: 3px 0px rgba(229, 109, 9, 1);
+    margin-block: 30px;
+  }
+}
+
+/* Accordion */
+@media (max-width: 768px) {
+  .AccordionMain {
+    padding: 20px;
+  }
+  .AccordionHead {
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 30px;
+  }
+  .AccordionText {
+    font-size: 20px;
+    line-height: 20px;
+    margin-top: 10px;
+  }
+}
