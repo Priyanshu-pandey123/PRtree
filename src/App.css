@@ -4,6 +4,8 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+  --primaryColor: red;
+  --primaryText: "Dm Sans";
 }
 .font-dm-sans {
   font-family: "DM Sans", sans-serif;

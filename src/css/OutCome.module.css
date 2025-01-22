@@ -79,7 +79,7 @@
   top: 0;
   left: 0;
   width: 100%; /* Ensure it spans the full width of the parent */
-  height: 20%; /* 40% of the height */
+  height: 10%; /* 40% of the height */
   background-color: white;
   opacity: 1; /* 40% white transparency */
   z-index: 2; /* Place the white overlay above the background image */
@@ -91,17 +91,17 @@
   top: 0;
   left: 0;
   width: 100%; /* Ensure no horizontal overflow */
-  height: 100%;
+  height: 100vh;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  padding: 50px 150px;
+  padding: 20px 150px 150px 50px;
 }
 
 .midImage {
   max-width: 100%; /* Ensure the image doesn’t exceed container width */
-  max-height: 50%; /* Ensure the image doesn’t exceed container height */
+  max-height: 45%; /* Ensure the image doesn’t exceed container height */
   position: relative;
   z-index: 3; /* Ensure image stays on top of the white overlay */
 }
@@ -144,6 +144,9 @@
 /* OurStory */
 .OurStoryMain {
   padding: 50px 150px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 .OurStoryImageBorder {
   border: 1px solid black;
@@ -219,12 +222,22 @@
   background-color: black; /* Black color */
   height: 50px; /* Banner height */
   transform: rotate(10deg); /* Rotate opposite direction */
-  top: 60%; /* Adjust vertical position */
+  top: 40%; /* Adjust vertical position */
 }
 
 .repeatedText {
   display: flex;
-  gap: 10px; /* Spacing between the boxes */
+  gap: 10px;
+  animation: scrollLeft 20s linear infinite;
+}
+
+@keyframes scrollLeft {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
 }
 
 .textBox {
@@ -250,6 +263,14 @@
   text-align: center; /* Center align the text */
   text-shadow: 3px 0px #000000;
 }
+.AccordionText {
+  font-family: var(--primaryText); /* Set the font to Popins */
+  font-weight: 500; /* Set the font weight to 400 */
+  font-size: 37px; /* Set the font size */
+  line-height: 44px; /* Set the line height */
+  /* Center align the text */
+  color: black; /* Set the text color */
+}
 .needHelp {
   padding: 30px 40px;
   background: rgba(36, 34, 55, 1);
@@ -263,8 +284,128 @@
   padding: 20px 40px;
   background-color: white;
   color: black;
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
 }
 .helpMain {
-  width: 100vw;
-  background-color: rgba(229, 109, 9, 1);
+  padding: 50px 150px;
+  background: linear-gradient(to bottom, white 50%, #e56d09 50%);
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 40px;
+}
+
+@media (max-width: 768px) {
+  .whiteOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Ensure it spans the full width of the parent */
+    height: 20%; /* 40% of the height */
+    background-color: white;
+    opacity: 1; /* 40% white transparency */
+    z-index: 2; /* Place the white overlay above the background image */
+    overflow: hidden; /* Prevent accidental overflow */
+  }
+  .ThenEveroverlay {
+    padding: 20px;
+  }
+  .ThenEverText {
+    font-size: 35px;
+    line-height: 40px;
+    margin-top: 10px;
+  }
+  .ThenEverPara {
+    font-family: "Popins";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #ffffffd1;
+    max-width: 100%;
+  }
+}
+
+/* Our Story  */
+@media (max-width: 768px) {
+  .OurStoryMain {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  .OurStoryHead {
+    font-size: 40px;
+    line-height: 40px;
+  }
+  .OurStoryImageContainer {
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+    padding: 20px;
+  }
+  .OurStoryImageBorder {
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 10px 20px;
+    width: 100%;
+    box-shadow: 16px 16px 0px 0px #1a1a1a;
+  }
+  .OurStoryImg {
+    height: auto;
+    width: 100%;
+  }
+}
+
+/* Out Come */
+
+@media (max-width: 768px) {
+  .OutComeHead {
+    font-family: "DM Sans", sans-serif; /* Set the font to DM Sans */
+    font-weight: 600; /* Set the font weight to 600 */
+    font-size: 40px; /* Set the font size */
+    line-height: 40px; /* Set the line height */
+    letter-spacing: 1px; /* Set letter spacing */
+    text-align: center; /* Center align the text */
+    text-shadow: 3px 0px #000000;
+  }
+}
+
+/* Accordion */
+
+@media (max-width: 768px) {
+  .AccordionMain {
+    padding: 20px;
+  }
+  .AccordionHead {
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 30px;
+  }
+  .needHelp {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    p {
+      font-size: 20px;
+      padding: 10px;
+    }
+  }
+
+  .helpMain {
+    padding: 10px;
+    background: linear-gradient(to bottom, white 50%, #e56d09 50%);
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 40px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
 }

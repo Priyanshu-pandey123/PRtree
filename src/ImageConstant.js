@@ -42,7 +42,9 @@ export const clientImageArray = [
   client3,
   client4,
   client5,
+  client1,
   client6,
+  client3,
 ];
 
 export { paraImage1, paraImage2, click };

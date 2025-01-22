@@ -1,15 +1,25 @@
 .FooterContainer {
-  background-color: black;
+  background-color: #000000;
   height: auto;
-  width: 100%;
+  width: 100vw;
   padding: 50px 150px;
-  display: flex;
   color: white;
-  column-gap: 20px;
+}
+.footerMain {
+  display: flex;
 }
 .footerList {
   display: flex;
+  justify-content: space-between;
   columns: 30px;
+  color: rgba(255, 255, 255, 0.39);
+}
+.footerListMain {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 .footerHead {
@@ -34,7 +44,12 @@
   color: rgba(255, 255, 255, 0.39);
   max-width: 150px;
 }
-.footerMain {
-  /* border: 1px solid white; */
-  margin-inline: 30px;
+
+.footerHeadMain {
+  display: flex;
+  flex-direction: column;
+}
+.footerBottom {
+  border-top: 1px solid white;
+  margin-block: 30px;
 }
