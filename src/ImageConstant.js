@@ -1,5 +1,5 @@
 import client1 from "./assets/image 1.png";
-import client2 from "./assets/image2.png";
+import client2 from "./assets/Image2.png";
 import client3 from "./assets/image 3.png";
 import client4 from "./assets/image 4.png";
 import client5 from "./assets/image 5.png";
@@ -46,7 +46,6 @@ export const clientImageArray = [
   client6,
   client3,
 ];
-
 export { paraImage1, paraImage2, click };
 
 export { our1, our2, our3, our4 };
