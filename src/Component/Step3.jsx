@@ -1,6 +1,7 @@
 // Step3 Component
 import React from "react";
 import { useFormContext } from "react-hook-form";
+import styles from "../css/multiform.module.css";
 import clsx from "clsx";
 
 export function Step3() {
@@ -19,12 +20,13 @@ export function Step3() {
           Company Name
         </label>
         <input
+          placeholder="Enter company name"
           type="text"
           id="companyName"
           {...register("companyName", {
             required: "Company name is required",
           })}
-          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
+          className={styles.inputText}
         />
         {errors.companyName && (
           <p className="mt-1 text-sm text-red-600">
@@ -51,8 +53,8 @@ export function Step3() {
               message: "Please enter a valid URL",
             },
           })}
-          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
-          placeholder="https://example.com"
+          className={styles.inputText}
+          placeholder="Enter Your https://example.com"
         />
         {errors.website && (
           <p className="mt-1 text-sm text-red-600">{errors.website.message}</p>

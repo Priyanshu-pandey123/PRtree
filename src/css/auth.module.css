@@ -1,0 +1,168 @@
+.authMain {
+  position: relative;
+  width: 100%;
+  min-height: 100vh; /* Ensure it covers the full viewport height initially */
+  background: url("../assets/Image.png") no-repeat center center; /* Center the image */
+  background-size: cover; /* Make the image stretch to cover the entire container */
+  overflow: hidden; /* Prevent scrolling */
+}
+.authOverlay {
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  padding: 20px 100px 20px 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 50px;
+}
+
+.authLogHead {
+  font-family: Inter;
+  font-weight: 500;
+  font-size: 33px;
+  line-height: 46px;
+  color: #e56d09;
+  margin-top: 20px;
+}
+.authInputMain {
+  position: relative;
+  max-width: 400px;
+  margin-block: 20px;
+}
+.authInput {
+  padding: 15px 80px;
+  width: 100%;
+}
+.authIcon {
+  color: #e56d09;
+  height: 30px;
+  width: 40px;
+  position: absolute;
+  left: 20px;
+  top: 18%;
+}
+.logBtn {
+  width: 400px;
+  padding: 20px;
+  background-color: #e56d09;
+  font-family: Inter;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  color: white;
+  margin-top: 20px;
+}
+.googleLogin {
+  width: 400px;
+  padding: 20px;
+  font-family: Inter;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin-top: 20px;
+  border: 1px solid white;
+}
+.GoogleLogo {
+  margin-inline: 20px;
+}
+
+.authPara {
+  margin-block: 20px;
+  font-family: Inter;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+}
+.para1 {
+  color: #707070;
+}
+.para2 {
+  color: #e56d09;
+}
+
+.errorText {
+  font-family: Inter;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  color: red;
+}
+.authClientConatiner {
+  background-color: white;
+}
+
+@media (max-width: 500px) {
+  .authLeft {
+    width: 100%;
+    height: fit-content;
+    padding: 50px 10px;
+  }
+
+  .authInputMain {
+    position: relative;
+    width: 100%;
+    margin-block: 20px;
+  }
+  .authOverlay {
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: auto;
+    overflow: hidden;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 30px;
+  }
+  .logBtn {
+    width: 90vw;
+    padding: 20px;
+    background-color: #e56d09;
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+    color: white;
+    margin-top: 20px;
+    margin-inline: 10px;
+  }
+  .googleLogin {
+    width: 90vw;
+    padding: 20px;
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin-top: 20px;
+    margin-inline: 10px;
+    border: 1px solid white;
+  }
+  .authPara {
+    margin-block: 20px;
+    font-family: Inter;
+    font-weight: 500;
+    font-size: px;
+    line-height: 20px;
+  }
+  .rightImage {
+    display: hidden;
+  }
+  .authInputMain {
+    position: relative;
+    width: 90vw;
+    margin-block: 20px;
+    margin-inline: 10px;
+  }
+}

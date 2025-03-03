@@ -1,6 +1,8 @@
 import React from "react";
 import { useFormContext } from "react-hook-form";
+import styles from "../css/multiform.module.css";
 import clsx from "clsx";
+console.log(styles.inputText);
 export function Step1() {
   const {
     register,
@@ -18,6 +20,7 @@ export function Step1() {
         </label>
         <input
           type="text"
+          placeholder="Enter full name"
           id="name"
           {...register("name", {
             required: "Name is required",
@@ -26,7 +29,7 @@ export function Step1() {
               message: "Name must be at least 2 characters",
             },
           })}
-          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
+          className={styles.inputText}
         />
         {errors.name && (
           <p className="mt-1 text-sm text-red-600">{errors.name.message}</p>
@@ -42,6 +45,7 @@ export function Step1() {
         </label>
         <input
           type="email"
+          placeholder="Enter email address"
           id="email"
           {...register("email", {
             required: "Email is required",
@@ -50,7 +54,7 @@ export function Step1() {
               message: "Invalid email address",
             },
           })}
-          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
+          className={styles.inputText}
         />
         {errors.email && (
           <p className="mt-1 text-sm text-red-600">{errors.email.message}</p>
@@ -66,6 +70,7 @@ export function Step1() {
         </label>
         <input
           type="tel"
+          placeholder="Enter phone number"
           id="phone"
           {...register("phone", {
             required: "Phone number is required",
@@ -74,7 +79,7 @@ export function Step1() {
               message: "Invalid phone number",
             },
           })}
-          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
+          className={styles.inputText}
         />
         {errors.phone && (
           <p className="mt-1 text-sm text-red-600">{errors.phone.message}</p>

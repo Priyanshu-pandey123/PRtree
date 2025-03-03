@@ -4,7 +4,7 @@ import styles from "../css/Step.module.css";
 import { our1, our2, our3, our4 } from "../ImageConstant";
 const OurApproach = () => {
   return (
-    <div className={styles.OurApproachMain}>
+    <div className={styles.OurApproachMain} id="ourApproach">
       <h2 className={styles.OurApproachHead}>OUR APPROACH</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <ApproachBox

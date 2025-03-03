@@ -3,6 +3,7 @@ import "./App.css";
 import HeroSection from "./Page/HeroSection";
 import Navbar from "./Component/Navbar";
 import Footer from "./Component/Footer";
+import { useSelector } from "react-redux";
 import {
   BrowserRouter,
   createBrowserRouter,
@@ -12,6 +13,10 @@ import {
   Routes,
 } from "react-router-dom";
 import MultiForm from "./Page/MultiForm";
+import AdminTable from "./Component/AdminTable";
+import Auth from "./Component/Auth";
+import ResetPassword from "./Component/ResetPassword";
+import PageNotFound from "./Component/PageNotFound";
 
 function Layout() {
   return (
@@ -28,6 +33,7 @@ function App() {
     {
       path: "/",
       element: <Layout />,
+      errorElement: <PageNotFound />,
       children: [
         {
           index: true,
@@ -37,11 +43,23 @@ function App() {
           path: "auth",
           element: <MultiForm />,
         },
+        {
+          path: "admin-table",
+          element: <AdminTable />,
+        },
       ],
+    },
+    {
+      path: "/signIn",
+      element: <Auth />,
+    },
+    {
+      path: "/reset-password/:id",
+      element: <ResetPassword />,
     },
   ]);
 
-  return <RouterProvider router={router} />;
+  return <RouterProvider router={router}></RouterProvider>;
 }
 
 export default App;

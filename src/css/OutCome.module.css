@@ -12,7 +12,7 @@
   text-shadow: 3px 0px rgba(229, 109, 9, 1);
 }
 .NumberText {
-  width: 345px;
+  width: auto;
   height: auto;
   border: 0.5px solid rgba(0, 0, 0, 1);
   display: flex;

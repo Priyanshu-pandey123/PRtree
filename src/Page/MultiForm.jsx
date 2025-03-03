@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useForm, FormProvider, useFormContext } from "react-hook-form";
+import { ToastContainer, toast } from "react-toastify";
 import {
   FiArrowLeft,
   FiArrowRight,
@@ -7,19 +8,20 @@ import {
   FiCheck,
 } from "react-icons/fi";
 
-// import StepIndicator from "./components/StepIndicator";
-
 import { Step1 } from "../Component/Step1";
-// import { Step2 } from "../Component/Step2";
-// import { Step3 } from "../Component/Step3";
 import StepIndicator from "../Component/StepIndicator";
-// import { useForm, FormProvider, useFormContext } from "react-hook-form";
 import { Step2 } from "../Component/Step2";
 import clsx from "clsx";
 import { Step3 } from "../Component/Step3";
+import styles from "../css/multiform.module.css";
+import { useCreateLeadMutation } from "../store/leadSlice";
+import { useNavigate } from "react-router-dom";
 
 function MultiForm() {
   const [currentStep, setCurrentStep] = useState(1);
+  const [createLead, { isLoading: isCreateLeadLoading }] =
+    useCreateLeadMutation();
+  const navigate = useNavigate();
   const methods = useForm({
     defaultValues: {
       services: {
@@ -32,9 +34,17 @@ function MultiForm() {
     },
   });
 
-  const onSubmit = (data) => {
+  const onSubmit = async (data) => {
     console.log("Form submitted:", data);
-    alert("Form submitted successfully!");
+    try {
+      const result = await createLead(data);
+      console.log(result);
+      toast.success("form sumitted successfully");
+      navigate("/admin-table");
+    } catch (err) {
+      console.log(err);
+      toast.err("some problem in submitted form");
+    }
   };
 
   const nextStep = async () => {
@@ -56,7 +66,7 @@ function MultiForm() {
         <StepIndicator currentStep={currentStep} />
 
         <FormProvider {...methods}>
-          <form onSubmit={methods.handleSubmit(onSubmit)} className="mt-8">
+          <form onSubmit={methods.handleSubmit(onSubmit)} className={`mt-8`}>
             <div className="mb-8">
               {currentStep === 1 && <Step1 />}
               {currentStep === 2 && <Step2 />}
@@ -96,6 +106,7 @@ function MultiForm() {
             </div>
           </form>
         </FormProvider>
+        <ToastContainer />
       </div>
     </div>
   );

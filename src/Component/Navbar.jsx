@@ -3,35 +3,67 @@ import React, { useState } from "react";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import prtreeLOGO from "../assets/prtreeLOGO.webp";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { useLogoutMutation } from "../store/apiSlice";
+import { toast, ToastContainer } from "react-toastify";
+import { useDispatch } from "react-redux";
+import { logoutUser } from "../store/userSlice";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const user = useSelector((state) => state.user);
+  const dispatch = useDispatch();
+  const [logout, { isLoading, isSuccess, isError, error, data }] =
+    useLogoutMutation();
+
+  const handleLogOut = async () => {
+    try {
+      await logout();
+      dispatch(logoutUser());
+      toast.success("logout successfully ");
+    } catch (err) {
+      toast.error("some error in logout");
+    }
+  };
 
   return (
     <div className="bg-black w-full p-4">
-      <nav className="  border border-white mx-[50px] md:mx-[auto] sm:mx-[20px] flex items-center justify-between  px-6 md:px-12 py-4 rounded-full  sm:mx=[10px] mt-4  top-0 left-0 right-0 z-50 w-[80%] bg-black">
+      <nav className="border border-white mx-[50px] md:mx-[auto] sm:mx-[20px] flex items-center justify-between  px-6 md:px-12 py-4 rounded-full  sm:mx=[10px] mt-4  top-0 left-0 right-0 z-50 w-[80%] bg-black">
         <div>
           <img src={prtreeLOGO} alt="logo not found" className="h-10 w-auto" />
         </div>
         <div className="hidden md:flex gap-12 font-dm-sans font-medium text-sm tracking-wider text-white">
           <ul className="flex gap-5">
             <Link to={"/"}>Home</Link>
-            <Link>About</Link>
-            <Link>Pricing</Link>
+            <a href="#ourNetwork">About</a>
+            <a href="#ourApproach">Pricing</a>
             <Link>FAQ</Link>
             <Link>Subscribe</Link>
           </ul>
         </div>
         <div className="hidden md:flex">
-          <Link
+          {user.isAuthenticated ? (
+            <Link
+              onClick={handleLogOut}
+              to="/"
+              className="font-dm-sans font-medium text-sm tracking-wider text-center bg-orange-600 text-white rounded-full px-6 py-2 mr-4"
+            >
+              Log Out
+            </Link>
+          ) : (
+            <Link
+              to="/signIn"
+              className="font-dm-sans font-medium text-sm tracking-wider text-center bg-orange-600 text-white rounded-full px-6 py-2 mr-4"
+            >
+              Log In
+            </Link>
+          )}
+          {/* <Link
             to="/auth"
-            className="font-dm-sans font-medium text-sm tracking-wider text-center bg-orange-600 text-white rounded-full px-6 py-2 mr-4"
+            className="font-dm-sans font-medium text-sm tracking-wider text-center bg-orange-600 text-white rounded-full px-6 py-2"
           >
-            Log In
-          </Link>
-          <button className="font-dm-sans font-medium text-sm tracking-wider text-center bg-orange-600 text-white rounded-full px-6 py-2">
             Sign Up
-          </button>
+          </Link> */}
         </div>
         <div className="md:hidden">
           <HiOutlineMenuAlt3
@@ -41,25 +73,42 @@ const Navbar = () => {
         </div>
 
         {isMenuOpen && (
-          <div className="absolute top-16 left-0 w-full bg-black text-white flex flex-col items-center py-6 md:hidden">
+          <div className="absolute top-16 left-0 w-fit p-20 bg-black text-white flex flex-col items-center py-6 md:hidden z-20">
             <ul className="flex flex-col gap-4 font-dm-sans font-medium text-sm tracking-wider text-center">
-              <li>Home</li>
-              <li>About</li>
-              <li>Pricing</li>
-              <li>FAQ</li>
-              <li>Subscribe</li>
+              <Link to="/">Home</Link>
+              <Link>About</Link>
+              <Link>Pricing</Link>
+              <Link>FAQ</Link>
+              <Link>Subscribe</Link>
             </ul>
             <div className="flex flex-col gap-4 mt-6">
-              <button className="font-dm-sans font-medium text-sm tracking-wider bg-orange-600 text-white rounded-full px-6 py-2">
-                Log In
-              </button>
-              <button className="font-dm-sans font-medium text-sm tracking-wider bg-orange-600 text-white rounded-full px-6 py-2">
+              {user.isAuthenticated ? (
+                <Link
+                  onClick={handleLogOut}
+                  to="/"
+                  className="font-dm-sans font-medium text-sm tracking-wider text-center bg-orange-600 text-white rounded-full px-6 py-2 mr-4"
+                >
+                  Log Out
+                </Link>
+              ) : (
+                <Link
+                  to="/signIn"
+                  className="font-dm-sans font-medium text-sm tracking-wider text-center bg-orange-600 text-white rounded-full px-6 py-2 mr-4"
+                >
+                  Log In
+                </Link>
+              )}
+              {/* <Link
+                to="/auth"
+                className="font-dm-sans font-medium text-sm tracking-wider bg-orange-600 text-white rounded-full px-6 py-2"
+              >
                 Sign Up
-              </button>
+              </Link> */}
             </div>
           </div>
         )}
       </nav>
+      <ToastContainer />
     </div>
   );
 };
