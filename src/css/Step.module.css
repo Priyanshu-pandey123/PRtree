@@ -185,7 +185,6 @@
 @media (max-width: 768px) {
   .clientMain {
     padding: 30px;
-    border: 2px solid red;
   }
   .clientHead {
     font-size: 30px;

@@ -3,6 +3,7 @@ import React from "react";
 import home from "../css/home.module.css";
 import headImage from "../assets/headImage.png";
 import Navbar from "./Navbar";
+import { Link } from "react-router-dom";
 
 const NavHome = () => {
   return (
@@ -27,9 +28,9 @@ const NavHome = () => {
               modern public relations. Join us in transforming the future of PR,
               making it accessible and impactful.
             </p>
-            <button to="/" className={home.btn}>
+            <Link to="/signIn" className={home.btn}>
               Get Started
-            </button>
+            </Link>
           </div>
           <div className={home.right}>
             <img src={headImage} alt="head Image Not found" />

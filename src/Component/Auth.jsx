@@ -25,6 +25,7 @@ const Auth = () => {
   const [signup, { isLoading: isSignupLoading }] = useSignupMutation();
   const [forgetPassword, { isLoading: isForgetPasswordLoading }] =
     useChangePasswordMutation();
+
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -66,18 +67,21 @@ const Auth = () => {
       // SIGN UP mode
       try {
         const result = await signup(formData).unwrap();
-        console.log("Sign up successful:", result);
+        console.log("Sign up successful:", result?.data?.message);
         toast.success("Sign up successful!");
         setIsSignIn(false);
       } catch (err) {
         console.error("Sign up failed:", err);
-        toast.error("Sign up failed. Please check your information.");
+        const message = err?.data?.message;
+        toast.error(
+          message || "Sign up failed. Please check your information."
+        );
       }
     } else {
       // LOGIN mode
       try {
         const result = await login(formData).unwrap();
-        console.log("Login successful:", result);
+        console.log("Login successful:", result.data);
         toast.success("Login successful!");
         dispatch(setUser(result?.data));
         setTimeout(() => {
@@ -85,7 +89,9 @@ const Auth = () => {
         }, 1000);
       } catch (err) {
         console.error("Login failed:", err);
-        toast.error("Login failed. Please check your credentials.");
+        const message = err.data.message;
+        console.log(message);
+        toast.error(message || "Login failed. Please check your credentials.");
       }
     }
   };
@@ -163,8 +169,16 @@ const Auth = () => {
                   <p className={style.errorText}>{errors.password.message}</p>
                 )}
 
-                <button type="submit" className={style.logBtn}>
-                  {!isSignIn ? "Log In" : "Sing Up"}
+                <button
+                  type="submit"
+                  className={style.logBtn}
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting
+                    ? "Processing..."
+                    : !isSignIn
+                    ? "Log In"
+                    : "Sign Up"}
                 </button>
               </form>
               <button className={style.googleLogin}>
@@ -214,8 +228,12 @@ const Auth = () => {
                   <p className={style.errorText}>{errors.email.message}</p>
                 )}
 
-                <button type="submit" className={style.logBtn}>
-                  Send Email
+                <button
+                  type="submit"
+                  className={style.logBtn}
+                  disabled={isForgetPasswordLoading}
+                >
+                  {isForgetPasswordLoading ? "Sending..." : "Send Email"}
                 </button>
               </form>
               <p
