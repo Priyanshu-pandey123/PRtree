@@ -7,6 +7,7 @@ import { useSelector } from "react-redux";
 import {
   BrowserRouter,
   createBrowserRouter,
+  Navigate,
   Outlet,
   Route,
   RouterProvider,
@@ -29,6 +30,7 @@ function Layout() {
 }
 
 function App() {
+  const user = useSelector((state) => state.user);
   const router = createBrowserRouter([
     {
       path: "/",
@@ -41,11 +43,19 @@ function App() {
         },
         {
           path: "auth",
-          element: <MultiForm />,
+          element: user.isAuthenticated ? (
+            <MultiForm />
+          ) : (
+            <Navigate to="/signIn" />
+          ),
         },
         {
           path: "admin-table",
-          element: <AdminTable />,
+          element: user.isAuthenticated ? (
+            <AdminTable />
+          ) : (
+            <Navigate to="/signIn" />
+          ),
         },
       ],
     },

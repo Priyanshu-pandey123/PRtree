@@ -84,9 +84,8 @@ const Auth = () => {
         console.log("Login successful:", result.data);
         toast.success("Login successful!");
         dispatch(setUser(result?.data));
-        setTimeout(() => {
-          navigate("/auth");
-        }, 1000);
+        // await new Promise((resolve) => setTimeout(resolve, 500));
+        navigate("/auth");
       } catch (err) {
         console.error("Login failed:", err);
         const message = err.data.message;
