@@ -1,2 +1,2 @@
-export const backendUrl = "/api/auth";
-export const backendLeadUrl = "/api/lead";
+export const backendUrl = "/api/api/auth";
+export const backendLeadUrl = "/api/api/lead";
