@@ -3,6 +3,7 @@ import "./App.css";
 import HeroSection from "./Page/HeroSection";
 import Navbar from "./Component/Navbar";
 import Footer from "./Component/Footer";
+import Contact from "./Page/Contact";
 import { useSelector } from "react-redux";
 import {
   BrowserRouter,
@@ -40,6 +41,10 @@ function App() {
         {
           index: true,
           element: <HeroSection />,
+        },
+        {
+          path: "contact",
+          element: <Contact />
         },
         {
           path: "auth",

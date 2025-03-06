@@ -1,0 +1,350 @@
+.main {
+    margin: 50px 200px;
+  }
+  .errorMsg {
+    font-family: var(--font-family-poppins);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: red;
+  }
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .head {
+    font-family: var(--font-family-poppins);
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 60px;
+  }
+  .header {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+  }
+  .para {
+    font-family: var(--font-family-poppins);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    color: #717171;
+  }
+  .formMain {
+    display: flex;
+    box-shadow: 0px 0px 60px 30px rgba(0, 0, 0, 0.08);
+    padding: 10px;
+  }
+  
+  .formLeft {
+    flex: 0 0 40%; /* Flex basis: 40%, no growth, no shrink */
+    max-width: 40%; /* Ensure it does not grow beyond 40% */
+    box-sizing: border-box; /* Include padding and border in the width */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    border-radius: 20px;
+  }
+  .formHeadMain {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+  
+  .formRight {
+    flex: 0 0 60%; /* Flex basis: 60%, no growth, no shrink */
+    max-width: 60%; /* Ensure it does not grow beyond 60% */
+    box-sizing: border-box; /* Include padding and border in the width */
+    background-color: #ffffff;
+    padding: 20px 20px 100px 20px;
+  }
+  .formLeft {
+    padding: 30px;
+    background-color: #000000;
+  }
+  .formHead {
+    font-family: var(--font-family-poppins);
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 42px;
+    color: #ffffff;
+  }
+  .formPara {
+    font-family: var(--font-family-poppins);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    color: #c9c9c9;
+  }
+  .formData {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+  }
+  .IconColor {
+    color: white;
+    width: 25px;
+    height: 30px;
+  }
+  .IconColor1 {
+    color: white;
+    width: 20px;
+    height: 20px;
+  }
+  .iconMsg {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    max-width: 300px;
+  }
+  .msg {
+    font-family: var(--font-family-poppins);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #c9c9c9;
+  }
+  .iconCircle {
+    padding: 10px;
+    background-color: #1b1b1b;
+    border-radius: 50%;
+  }
+  .formLeftFooter {
+    display: flex;
+    gap: 20px;
+    margin-top: 70px;
+  }
+  .circle {
+    position: absolute;
+    background-color: #48484880;
+    width: 150px;
+    height: 150px;
+    bottom: 0;
+    right: 0;
+    border-radius: 50%;
+  }
+  .circle1 {
+    position: absolute;
+    background-color: #48484880;
+    width: 150px;
+    height: 150px;
+    bottom: 46px;
+    right: 59px;
+  
+    border-radius: 50%;
+  }
+  
+  .iconCircle:hover {
+    background-color: white;
+    .IconColor1:hover {
+      color: black;
+    }
+  }
+  .formRight {
+    background-color: #ffffff;
+  }
+  .inputContainer {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 50px;
+  }
+  .inputBox {
+    all: unset;
+    height: 40px;
+    border-bottom: 1px solid black;
+  }
+  .inputBoxContainer {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    /* border-bottom: 1px solid black; */
+  }
+  .label {
+    font-family: var(--font-family-poppins);
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 20px;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .radioHead {
+    font-family: var(--font-family-poppins);
+    font-weight: 600;
+    font-size: 14x;
+    line-height: 20px;
+    color: black;
+    margin-bottom: 40px;
+  }
+  .radioInputMain {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .radioInput {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+  }
+  .radioCircle {
+    width: 25px;
+    height: 25px;
+  }
+  .radioText {
+    font-family: var(--font-family-poppins);
+    font-weight: 400;
+    font-size: 12x;
+    line-height: 20px;
+    color: black;
+  }
+  .messageContainer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+  }
+  .messageInput {
+    all: unset;
+    font-family: var(--font-family-poppins);
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 20px;
+    border-bottom: 1px solid black;
+    height: 40px;
+    width: 80%;
+  }
+  .messageLabel {
+    margin-bottom: 20px;
+    display: flex;
+    font-family: var(--font-family-poppins);
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 20px;
+    color: #8d8d8d;
+  }
+  .term {
+    display: flex;
+    gap: 10px;
+    margin-top: 50px;
+  }
+  .termBox {
+    width: 30px;
+    height: 30px;
+  }
+  .termPara {
+    font-family: var(--font-family-poppins);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    color: #000000;
+  }
+  .btnContainer {
+    display: flex;
+    justify-content: flex-end; /* Aligns children to the right */
+    align-items: center; /* Vertically centers the button (optional) */
+    width: 100%; /* Ensures the container spans the full width */
+  }
+  
+  .submitButton {
+    color: white;
+    background-color: black;
+    font-family: var(--font-family-poppins);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 15px 60px;
+    text-align: center;
+    border-radius: 5px;
+  }
+  .submitButton:hover {
+    background-color: black;
+    color: white;
+  }
+  .link {
+    border-bottom: 1px solid black;
+  }
+  @media (max-width: 1250px) {
+    .main {
+      margin: 10px 50px;
+    }
+  }
+  @media (max-width: 900px) {
+    .main {
+      margin: 0px;
+    }
+    .formLeft {
+      min-width: 50%;
+    }
+    .formRight {
+      max-width: 50%;
+      margin-block: 20px;
+      padding: 10px;
+    }
+    .inputContainer {
+      flex-direction: column;
+    }
+    .inputBox {
+    }
+    .inputBoxContainer {
+      width: 100%;
+    }
+    .label {
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+    .btnContainer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 20px;
+    }
+  }
+  @media (max-width: 680px) {
+    .para {
+      padding: 5px 20px;
+      font-size: 15px;
+      text-align: center;
+    }
+    .main {
+      margin: 10px;
+    }
+    .formMain {
+      flex-direction: column;
+    }
+    .formLeft {
+      min-width: 100%;
+    }
+    .formRight {
+      min-width: 100%;
+      margin-block: 20px;
+      padding: 10px;
+    }
+    .inputContainer {
+      flex-direction: column;
+    }
+    .inputBox {
+    }
+    .inputBoxContainer {
+      width: 100%;
+    }
+    .label {
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+    .term {
+      display: flex;
+      flex-direction: column;
+    }
+    .errorMsg {
+      font-family: var(--font-family-poppins);
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 20px;
+      color: red;
+    }
+  }
+  
