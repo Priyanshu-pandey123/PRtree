@@ -176,8 +176,8 @@ const Auth = () => {
                   {isSubmitting
                     ? "Processing..."
                     : !isSignIn
-                    ? "Log In"
-                    : "Sign Up"}
+                      ? "Log In"
+                      : "Sign Up"}
                 </button>
               </form>
               <button className={style.googleLogin}>
@@ -207,7 +207,7 @@ const Auth = () => {
             <div className={style.authLeft}>
               <img src={prtreeLOGO} alt="logo not found" />
               <h1 className={style.authLogHead}>Forget Password</h1>
-              <form onSubmit={forgetHandleSubmit(onForgetEmailSubmit)}>
+              <form className={style.sendMailForm} onSubmit={forgetHandleSubmit(onForgetEmailSubmit)}>
                 <div className={style.authInputMain}>
                   <MdOutlineMail className={style.authIcon} />
                   <input
