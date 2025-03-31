@@ -81,6 +81,7 @@ const Navbar = () => {
               <Link>Pricing</Link>
               <Link>FAQ</Link>
               <Link>Subscribe</Link>
+              <Link to="/contact">Contact</Link>
             </ul>
             <div className="flex flex-col gap-4 mt-6">
               {user.isAuthenticated ? (

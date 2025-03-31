@@ -165,4 +165,14 @@
     margin-block: 20px;
     margin-inline: 10px;
   }
+  .sendMailForm{
+    /* background-color: red; */
+    width: 100%;
+    padding: 10px;
+    
+  }
+  .authPara{
+    text-align: center;
+  }
+
 }
