@@ -1,5 +1,6 @@
 import React from "react";
 import style from "../css/footer.module.css";
+import { Link } from "react-router-dom";
 
 const FooterHeadList = ({ head = "prine", data }) => {
   return (
@@ -7,9 +8,9 @@ const FooterHeadList = ({ head = "prine", data }) => {
       <h2 className={style.footerHead}>{head}</h2>
       <ul className={style.listContainer}>
         {data.map((text, ind) => (
-          <li className={style.footerMapList} key={ind}>
+          <Link to="/signIn" className={style.footerMapList} key={ind}>
             {text}
-          </li>
+          </Link>
         ))}
       </ul>
     </div>

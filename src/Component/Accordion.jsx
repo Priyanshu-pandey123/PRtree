@@ -1,5 +1,6 @@
 import React from "react";
 import style from "../css/OutCome.module.css";
+import { Link } from "react-router-dom";
 
 const Accordion = () => {
   return (
@@ -85,7 +86,9 @@ const Accordion = () => {
       <div className={style.helpMain}>
         <div className={style.needHelp}>
           <p>Need Help? Our specialist is one click away</p>
-          <button className={style.bookBtn}>Book Free Consultation</button>
+          <Link to={"/auth"} className={style.bookBtn}>
+            Book Free Consultation
+          </Link>
         </div>
       </div>
     </div>

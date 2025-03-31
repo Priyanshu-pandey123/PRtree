@@ -18,6 +18,7 @@ import AdminTable from "./Component/AdminTable";
 import Auth from "./Component/Auth";
 import ResetPassword from "./Component/ResetPassword";
 import PageNotFound from "./Component/PageNotFound";
+import Meeting from "./Component/Meeting";
 
 function Layout() {
   return (
@@ -43,25 +44,21 @@ function App() {
         },
         {
           path: "auth",
-          element: user.isAuthenticated ? (
-            <MultiForm />
-          ) : (
-            <Navigate to="/signIn" />
-          ),
+          element: true ? <MultiForm /> : <Navigate to="/signIn" />,
         },
         {
           path: "admin-table",
-          element: user.isAuthenticated ? (
-            <AdminTable />
-          ) : (
-            <Navigate to="/signIn" />
-          ),
+          element: true ? <AdminTable /> : <Navigate to="/signIn" />,
         },
       ],
     },
     {
       path: "/signIn",
       element: <Auth />,
+    },
+    {
+      path: "/meeting",
+      element: <Meeting />,
     },
     {
       path: "/reset-password/:id",

@@ -39,6 +39,7 @@ const Navbar = () => {
             <a href="#ourApproach">Pricing</a>
             <Link>FAQ</Link>
             <Link>Subscribe</Link>
+            <Link to={"/meeting"}>Talk Now</Link>
           </ul>
         </div>
         <div className="hidden md:flex">
